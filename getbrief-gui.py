@@ -108,11 +108,6 @@ root.title("Wikipedia's Daily Brief")
 root.configure(background='white')
 root.minsize(width=1400, height=800)
 
-# article_frame = Frame(root, bg='cyan', width=1100, height=200)
-# know_frame = Frame(root, bg='gray', width=200, height=700)
-# news_frame = Frame(root, bg='white', width=200, height=700)
-# pic_frame = Frame(root, bg='gray', width=1100, height=200)
-
 root.grid_rowconfigure(3, weight=1)
 root.grid_columnconfigure(2, weight=1)
 
