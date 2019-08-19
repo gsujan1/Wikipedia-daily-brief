@@ -1,4 +1,3 @@
-#!/usr/local/bin/python3.7
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
 import requests
