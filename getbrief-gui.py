@@ -22,7 +22,10 @@ soup_featured_pic = BeautifulSoup(source.content, 'lxml', parse_only = only_feat
 ######################### FEATURED ARTICLE ################################
 featured_article = ''   
 
-for string in soup_featured_article.stripped_strings:
+list_featured_article = iter(soup_featured_article.stripped_strings)
+next(list_featured_article)
+
+for string in list_featured_article:
     featured_article = featured_article + string + ' '
 
 splitter_featured_article = '( Full'
