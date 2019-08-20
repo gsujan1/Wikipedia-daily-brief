@@ -1,3 +1,4 @@
+#!/usr/local/bin/python3.7
 from bs4 import BeautifulSoup
 from bs4 import SoupStrainer
 import requests
@@ -77,7 +78,7 @@ featured_pic = ''
 for string in soup_featured_pic.stripped_strings:
     featured_pic = featured_pic + string + ' '
 
-splitter_pic = 'Photograph credit'
+splitter_pic = 'Recently featured'
 featured_pic = featured_pic.split(splitter_pic, 1)[0]
 
 featured_pic = featured_pic.replace(' . ', '. ')
