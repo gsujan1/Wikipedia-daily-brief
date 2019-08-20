@@ -23,7 +23,7 @@ soup_news = BeautifulSoup(source.content, 'lxml', parse_only = only_news)
 soup_featured_pic = BeautifulSoup(source.content, 'lxml', parse_only = only_featured_pic)
 
 ######################### FEATURED ARTICLE ################################
-featured_article = ''
+featured_article = ''   
 
 list_featured_article = iter(soup_featured_article.stripped_strings)
 next(list_featured_article)
@@ -108,7 +108,7 @@ featured_pic = ''
 for string in soup_featured_pic.stripped_strings:
     featured_pic = featured_pic + string + ' '
 
-splitter_pic = 'Photograph credit'
+splitter_pic = 'Recently featured'
 featured_pic = featured_pic.split(splitter_pic, 1)[0]
 
 featured_pic = featured_pic.replace(' . ', '. ')
