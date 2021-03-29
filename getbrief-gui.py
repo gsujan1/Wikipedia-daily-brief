@@ -20,7 +20,7 @@ soup_news = BeautifulSoup(source.content, 'lxml', parse_only = only_news)
 soup_featured_pic = BeautifulSoup(source.content, 'lxml', parse_only = only_featured_pic)
 
 ######################### FEATURED ARTICLE ################################
-featured_article = ''   
+featured_article = ''
 
 list_featured_article = iter(soup_featured_article.stripped_strings)
 next(list_featured_article)
@@ -136,4 +136,4 @@ right2.grid(row=0, rowspan=2, column=2)
 bot1.grid(row=3, column=1)
 bot2.grid(row=2, column=1)
 
-root.mainloop()  
+root.mainloop()
