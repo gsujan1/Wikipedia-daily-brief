@@ -105,24 +105,24 @@ img_resize = img.resize((600, 450), Image.ANTIALIAS)
 
 root = Tk()
 root.title("Wikipedia's Daily Brief")
-root.configure(background='white')
+root.configure(background='black')
 root.minsize(width=1400, height=800)
 
 root.grid_rowconfigure(3, weight=1)
 root.grid_columnconfigure(2, weight=1)
 
-top1 = Label(root, text = "TODAY'S FEATURED ARTICLE / PICTURE:", bg="white", font=('Courier', 18))
-top2 = Label(root, text = featured_article, wraplength=500, bg="white", font=('Helvetica', 10))
+top1 = Label(root, text = "TODAY'S FEATURED ARTICLE / PICTURE:", bg="black", font=('Courier 18 bold'))
+top2 = Label(root, text = featured_article, wraplength=500, bg="black", font=('Helvetica', 10))
 
-left1 = Label(root, text = "DID YOU KNOW...", wraplength=400, bg="white", font=('Courier', 18))
-left2 = Label(root, text = did_you_know, wraplength=400, justify='left', bg="white", font=('Helvetica', 10))
+left1 = Label(root, text = "DID YOU KNOW...", wraplength=400, bg="black", font=('Courier 18 bold'))
+left2 = Label(root, text = did_you_know, wraplength=400, justify='left', bg="black", font=('Helvetica', 10))
 
-right1 = Label(root, text = "IN THE NEWS:", wraplength=400, bg="white", font=('Courier', 18))
-right2 = Label(root, text = in_the_news, wraplength=400, justify='right', bg="white", font=('Helvetica', 10))
+right1 = Label(root, text = "IN THE NEWS:", wraplength=400, bg="black", font=('Courier 18 bold'))
+right2 = Label(root, text = in_the_news, wraplength=400, justify='right', bg="black", font=('Helvetica', 10))
 
 import_img = ImageTk.PhotoImage(img_resize)
 bot1 = Label(root, image=import_img)
-bot2 = Label(root, text = featured_pic, wraplength=500, bg="white", font=('Helvetica', 10))
+bot2 = Label(root, text = featured_pic, wraplength=500, bg="black", font=('Helvetica', 10))
 
 top1.grid(row=0, column=1)
 top2.grid(row=1, column=1)
