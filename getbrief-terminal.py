@@ -22,6 +22,15 @@ soup_news = BeautifulSoup(source.content, 'lxml', parse_only = only_news)
 # soup_on_this_day = BeautifulSoup(source.content, 'lxml', parse_only = only_on_this_day)
 soup_featured_pic = BeautifulSoup(source.content, 'lxml', parse_only = only_featured_pic)
 
+bannerbeg = "=================================================================================================="
+banner0 = " ______        _       _____  _____   ____  ____   ______   _______     _____  ________  ________  "
+banner1 = "|_   _ `.     / \     |_   _||_   _| |_  _||_  _| |_   _ \ |_   __ \   |_   _||_   __  ||_   __  | "
+banner2 = "  | | `. \   / _ \      | |    | |     \ \  / /     | |_) |  | |__) |    | |    | |_ \_|  | |_ \_| "
+banner3 = "  | |  | |  / ___ \     | |    | |   _  \ \/ /      |  __'.  |  __ /     | |    |  _| _   |  _|    "
+banner4 = " _| |_.' /_/ /   \ \_  _| |_  _| |__/ | _|  |_     _| |__) |_| |  \ \_  _| |_  _| |__/ | _| |_     "
+banner5 = "|______.'|____| |____||_____||________||______|   |_______/|____| |___||_____||________||_____|    "
+bannerend = "=================================================================================================="
+
 ######################### FEATURED ARTICLE ################################
 featured_article = ''   
 
@@ -37,6 +46,7 @@ featured_article = featured_article.split(splitter_featured_article, 1)[0]
 featured_article = featured_article.replace(' . ', '. ')
 featured_article = featured_article.replace(' , ', ', ')
 
+print("\n" + bannerbeg + "\n" + banner0 + "\n" + banner1 + "\n" + banner2 + "\n" + banner3 + "\n" + banner4 + "\n" + banner5 + "\n" + bannerend + "\n")
 print("TODAY'S FEATURED ARTICLE : ")
 print(str(featured_article))
 print(' ')
@@ -64,7 +74,6 @@ did_you_know = did_you_know.replace('that', 'THAT')
 
 print('DID YOU KNOW ?')
 print(str(did_you_know))
-print(' ')
 
 ######################### IN THE NEWS ################################
 in_the_news = ''
